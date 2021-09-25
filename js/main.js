@@ -15,5 +15,54 @@ $(document).ready(function () {
         infinity: true,
         // autoplay: true,
         autoplaySpeed: 6000,
+        verticalSwiping: true,
+        // touchThreshold: 4,
+    });
+    $(".works__slider").slick({
+        arrows: true,
+        slidesToShow: 5,
+        initialSlide: 2,
+        centerMode: true,
+        // variableWidth: true,
+        focusOnSelect: true,
+        centerPadding: "0",
+
+
+
+        responsive: [
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    variableWidth: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    variableWidth: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    centerMode: true,
+                    variableWidth: true,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5,
+                    centerMode: true,
+                    variableWidth: true,
+                }
+            }
+
+        ],
     });
 });
