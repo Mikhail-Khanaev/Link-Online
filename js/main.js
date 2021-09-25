@@ -12,7 +12,7 @@ $(document).ready(function () {
         arrows: false,
         dots: true,
         appendDots: $(".about__navigation"),
-        infinity: true,
+        infinity: false,
         // autoplay: true,
         autoplaySpeed: 6000,
         verticalSwiping: true,
