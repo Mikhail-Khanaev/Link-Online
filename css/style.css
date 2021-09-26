@@ -3841,6 +3841,9 @@ body._lock {
           flex: 1 1 auto;
 }
 
+/* ============================================== */
+/* Блок с общими классами */
+/* ============================================== */
 ._ibg {
   position: relative;
 }
@@ -3982,6 +3985,9 @@ body.ie ._ibg img {
   }
 }
 
+/* ============================================== */
+/* Блок Header */
+/* ============================================== */
 .header {
   padding: 25px 0;
   background-color: #f2f2f2;
@@ -4024,6 +4030,9 @@ body.ie ._ibg img {
   }
 }
 
+/* ============================================== */
+/* Блок Footer */
+/* ============================================== */
 .footer {
   background-color: #e8e8e8;
   margin-top: 70px;
@@ -4293,12 +4302,20 @@ body.ie ._ibg img {
     right: 10px;
   }
 }
+@media (max-width: 768px) {
+  .intro__column-image::after, .intro__column-image::before {
+    width: 29px;
+    height: 7px;
+    top: 145px;
+    right: 10px;
+  }
+}
 .intro__column-image::after {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .intro__top-innner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4503,6 +4520,16 @@ body.ie ._ibg img {
 }
 
 /* ============================================== */
+/* ============================================== */
+/* Блок Sales */
+/* ============================================== */
+.sales {
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  padding-bottom: 80px;
+  position: relative;
+}
+
 .sales__row-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4628,6 +4655,11 @@ body.ie ._ibg img {
 @media (max-width: 768px) {
   .sales__column-info {
     margin-bottom: -135px;
+  }
+}
+@media (max-width: 480px) {
+  .sales__column-info {
+    margin-bottom: -50px;
   }
 }
 
@@ -4764,6 +4796,9 @@ body.ie ._ibg img {
   margin-top: 10px;
 }
 
+/* ============================================== */
+/* Блок About */
+/* ============================================== */
 .about {
   /* Old browsers */
   background-color: #ece89d;
@@ -4778,7 +4813,6 @@ body.ie ._ibg img {
   .about {
     padding-top: 0;
     padding: 88px 0;
-    margin-top: 130px;
   }
 }
 
@@ -4905,13 +4939,8 @@ body.ie ._ibg img {
   }
 }
 
-@media (min-width: 1240px) {
-  .slider-item-text {
-    margin-bottom: 58px;
-  }
-}
-
 .slider-item-button {
+  margin-top: 58px;
   max-width: 250px;
   height: 50px;
   display: -webkit-box;
@@ -5006,6 +5035,7 @@ body.ie ._ibg img {
   .slider-item-text-wrapper {
     position: relative;
     top: 70px;
+    max-width: none;
   }
 }
 
@@ -5068,7 +5098,9 @@ body.ie ._ibg img {
   margin-bottom: 20px;
 }
 
-/* Start */
+/* ============================================== */
+/* Блок Works */
+/* ============================================== */
 .start {
   padding-top: 45px;
   padding-bottom: 40px;
@@ -5178,9 +5210,11 @@ body.ie ._ibg img {
   }
 }
 
-/* Works */
+/* ============================================== */
+/* Блок Intro */
+/* ============================================== */
 .works__container {
-  max-width: 1240px;
+  max-width: 1540px;
   margin: 0 auto;
 }
 
@@ -5198,6 +5232,10 @@ body.ie ._ibg img {
 
 .works__button {
   width: 100%;
+  margin: 0 auto;
+  max-width: 1260px;
+  padding-bottom: 60px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5207,6 +5245,18 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.works__button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  width: 95%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ddd;
 }
 .works__button a {
   max-width: 250px;
@@ -5301,6 +5351,9 @@ body.ie ._ibg img {
      object-fit: contain;
 }
 
+/* ============================================== */
+/* Блок Tarrifs */
+/* ============================================== */
 @font-face {
   font-family: "rouble";
   src: url("../fonts/rouble.otf") format("opentype");
@@ -5319,21 +5372,26 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .tarrifs__items {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 992px) {
+  .tarrifs__items {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
 .tarrifs__item {
+  margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5346,6 +5404,11 @@ body.ie ._ibg img {
           align-items: center;
   border: 1px solid #ddd;
   border-radius: 10px;
+}
+@media (min-width: 992px) {
+  .tarrifs__item:not(:last-child) {
+    margin-right: 5px;
+  }
 }
 @media (min-width: 992px) {
   .tarrifs__item {
@@ -5362,9 +5425,6 @@ body.ie ._ibg img {
     -webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
   }
-}
-.tarrifs__item:not(:last-child) {
-  margin-bottom: 25px;
 }
 
 .tarrifs__title {
@@ -5467,9 +5527,19 @@ body.ie ._ibg img {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+@media (min-width: 992px) {
+  .title-left {
+    font-size: 30px;
+  }
+}
 
 .tarrifs-rigth {
   font-size: 36px;
+}
+@media (max-width: 992px) {
+  .tarrifs-rigth {
+    font-size: 30px;
+  }
 }
 
 .tarrifs__button {
