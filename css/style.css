@@ -3821,6 +3821,11 @@ body._lock {
     max-width: 1260px;
   }
 }
+@media (min-width: 1860px) {
+  .container {
+    max-width: 1260px;
+  }
+}
 
 .wrapper {
   width: 100%;
@@ -4529,6 +4534,11 @@ body.ie ._ibg img {
   padding-bottom: 80px;
   position: relative;
 }
+@media (max-width: 768px) {
+  .sales {
+    padding-bottom: 0;
+  }
+}
 
 .sales__row-top {
   display: -webkit-box;
@@ -4811,8 +4821,8 @@ body.ie ._ibg img {
 }
 @media (min-width: 992px) {
   .about {
-    padding-top: 0;
     padding: 88px 0;
+    padding-bottom: 0;
   }
 }
 
@@ -5136,6 +5146,11 @@ body.ie ._ibg img {
   text-align: center;
   margin-bottom: 80px;
   position: relative;
+}
+@media (min-width: 480px) {
+  .start__title {
+    font-size: 30px;
+  }
 }
 .start__title::after {
   content: "";
