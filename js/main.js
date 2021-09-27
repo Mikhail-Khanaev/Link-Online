@@ -14,9 +14,17 @@ $(document).ready(function () {
         appendDots: $(".about__navigation"),
         infinite: false,
         // autoplay: true,
-        autoplaySpeed: 6000,
+        // autoplaySpeed: 6000,
         verticalSwiping: true,
         // touchThreshold: 4,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    swipe: false,
+                }
+            }
+        ]
     });
     $(".works__slider").slick({
         arrows: true,
